@@ -14,7 +14,7 @@ public class Problem6 {
     String str_rev = "";
 
     for(int a = str.length()-1; a>=0; a--){
-        str_rev = str_rev+str.charAt(a);
+        str_rev = str_rev + str.charAt(a);
     }
     //System.out.println(str_rev);
 
