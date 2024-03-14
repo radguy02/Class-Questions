@@ -1,6 +1,8 @@
-package Learn;
+//String buffer and String Class examples
 
-public class test6 {
+package Java;
+
+public class Problem8 {
     private static void length_method(){
         String str = "programming";
         System.out.println(str.length());
