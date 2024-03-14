@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 public class Problem7 {
     public static int[][] getArray(){                       //take input as array
+        @SuppressWarnings("resource")
         Scanner input = new Scanner(System.in);
         System.out.print("Enter the number of rows: ");
         int row = input.nextInt();
