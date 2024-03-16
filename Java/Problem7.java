@@ -55,6 +55,46 @@ public class Problem7 {
         return added;
     }
 
+    public static int[][] diff_two_arrays(int[][]a, int[][]b){
+        if(a.length!=b.length || a[0].length!=b[0].length){
+            throw new IllegalArgumentException("Matrices must have same dimensions for substraction.");
+        }
+
+        int[][] difference = new int[a.length][a.length];
+        for(int i=0; i<a.length; i++){
+            for(int j=0; j<a[i].length; j++){
+                difference[i][j] = a[i][j] - b[i][j];
+            }
+        }
+        return difference;
+    }
+
+    public static int max(int[][] a){
+        int max = 0;
+
+        for(int i=0; i<a.length; i++){
+            for(int j = 0; j<a[i].length; j++){
+                if(max<a[i][j]){
+                    max = a[i][j];
+                }
+            }
+        }
+        return max;
+    }
+
+    public static int min(int[][]a){
+        int min = a[1][1];
+
+        for(int i=0; i<a.length; i++){
+            for(int j = 0; j<a[i].length; j++){
+                if(min>a[i][j]){
+                    min = a[i][j];
+                }
+            }
+        }
+        return min;
+    }
+
     public static int[][] multiplication(int[][]a, int[][]b){
         if (a[0].length != b.length){
             throw new IllegalArgumentException("Matrices can not be multiplied.");
@@ -85,7 +125,16 @@ public class Problem7 {
         System.out.println("Sum of both the arrays: ");
         display(add_two_arrays(arr_a,arr_b));
 
+        System.out.println("Difference of both arrays: ");
+        display(diff_two_arrays(arr_a, arr_b));
+
         System.out.println("Matrix multiplication of both the arrays: ");
         display(multiplication(arr_a, arr_b));
+
+        System.out.println("Largest element in Matrix A: ");
+        System.out.println(max(arr_a));
+
+        System.out.println("Smallest element in Matrix A: ");
+        System.out.println(min(arr_a));
     }
 }
