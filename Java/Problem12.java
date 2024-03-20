@@ -10,7 +10,7 @@ Write a test program that creates two Rectangle objects one with width 4 and
 height 40 and the other with width 3.5 and height 35.9. Display the width, height,
 area, and perimeter of each rectangle in this order*/
 
-package Programme;
+package Java;
 
 class Rectangle{                    //Class created
     double width;
